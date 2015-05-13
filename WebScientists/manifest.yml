@@ -1,0 +1,13 @@
+applications:
+- services:
+  - Personality Insights-is
+  - Text to Speech-nj
+  - Speech To Text-qd
+  - Cloudant NoSQL DB-kh
+  disk_quota: 1024M
+  host: webprojectscientist
+  name: WebProjectScientist
+  path: webStarterApp.war
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M

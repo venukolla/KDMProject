@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Java Starter Application</display-name>
+  <welcome-file-list>
+    <welcome-file>Start.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>TestWebpage</servlet-name>
+    <servlet-class>com.ibm.samples.TestWebpage</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestWebpage</servlet-name>
+    <url-pattern>/TestWebpage</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Application Servlet</servlet-name>
+    <servlet-class>com.ibm.cloudoe.samples.DemoServlet</servlet-class>
+    <load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Application Servlet</servlet-name>
+    <url-pattern>/demo</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>YagoConsumer</servlet-name>
+    <servlet-class>com.ibm.samples.YagoConsumer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>YagoConsumer</servlet-name>
+    <url-pattern>/YagoConsumer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AddScientist</servlet-name>
+    <servlet-class>com.ibm.samples.AddScientist</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddScientist</servlet-name>
+    <url-pattern>/AddScientist</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>DemoServlet</servlet-name>
+    <servlet-class>com.ibm.cloudoe.samples.DemoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DemoServlet</servlet-name>
+    <url-pattern>/DemoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ScientistList</servlet-name>
+    <servlet-class>com.ibm.samples.ScientistList</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ScientistList</servlet-name>
+    <url-pattern>/ScientistList</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TextToSpeech</servlet-name>
+    <servlet-class>com.ibm.samples.TextToSpeech</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TextToSpeech</servlet-name>
+    <url-pattern>/TextToSpeech</url-pattern>
+  </servlet-mapping>
+</web-app>

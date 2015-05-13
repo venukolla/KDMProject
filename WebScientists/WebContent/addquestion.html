@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KDM:Add Question</title>
+<style>
+.btn
+	{
+	margin-top:145px;
+	margin-left:350px;
+	border:solid 2px #FF0000;
+	height:200px;
+	width:800px;
+	border-radius:10px;
+	
+	}
+</style>
+<script>
+function validateForm() {
+
+	var b = document.forms["myForm"]["arg1"].value;
+	var c = document.forms["myForm"]["arg2"].value;
+	var d = document.forms["myForm"]["arg3"].value;
+	var e = document.forms["myForm"]["txtans"].value;
+	
+	if( b==null || b=="" )
+		{
+		alert("Enter what/who");
+		document.forms["myForm"]["arg1"].focus();
+        return false;
+		}
+	else if( c==null || c=="" )
+		{
+		alert("Enter verb phrase");
+		document.forms["myForm"]["arg2"].focus();
+        return false;
+		}
+	else if( d==null || d=="" )
+		{
+		alert("Enter what/who");
+		document.forms["myForm"]["arg3"].focus();
+        return false;
+		}
+	else if(e==null || e=="")
+		{
+		alert("Enter Answer");
+		document.forms["myForm"]["txtans"].focus();
+	    return false;
+		}
+	else 
+		{
+		return true;
+		}	
+}
+</script>   
+
+</head>
+
+<body style="background-color: #3399FF">
+
+<div class="header">
+		<h1 align="center">Scientists Web Page</h1>
+		<table>
+			<tr>
+				<div style="clear: right; float: right; text-align: right;">
+					<a href="Start.jsp"><strong>HOME</strong></a>
+					<a href="Scientist.jsp"><strong>AddScientist</strong></a>
+					<a href="ListScientist.jsp"><strong>Group</strong></a> 
+					<a href="addquestion.html"><strong>AddQuestion</strong></a>
+					<a href="searchanswer.html"><strong>SearchAnswer</strong></a>
+					<a href="Yago.jsp"><strong>YAGO</strong></a>
+				</div>
+			</tr>
+		</table>
+	</div>
+
+	<div align="left">
+		<table>
+			<tr>
+				<td><img src="images/galileo.jpg" width="212" height="246" /></td>
+				<td><img src="images/darwin.jpeg" width="212" height="246" /></td>
+				<td><img src="images/einstein.jpeg" width="212" height="246" /></td>
+				<td><img src="images/grahambell.jpg" width="229" height="246" /></td>
+				<td><img src="images/newton.jpeg" width="229" height="246" /></td>
+				<td><img src="images/nikola.jpg" width="212" height="246" /></td>
+			</tr>
+		</table>
+	</div>
+<a href="NLPindex.html" style="margin-left: 33%;"> Home</a>
+<div  class="btn">
+<form action="UploadAnswer" enctype="multipart/form-data" method="post" name="myForm" onSubmit="return validateForm();" > 
+<table>
+<br>
+	<caption><b>Add Question Answer</b></caption>
+	<tr>
+    	<td>Enter Question:</td>
+        <td><input type="text" name="arg1" placeholder="What/Who"/></td>
+        <td><input type="text" name="arg2" placeholder="Verb Phrase"/></td>
+        <td><input type="text" name="arg3" placeholder="What/Who"/></td>
+    </tr>
+    <tr>
+    	<td>Enter Answer:</td>
+        <td><input type="text" name="txtans" /></td>
+    </tr>
+    <tr>
+    	<td>Upload Image:</td>
+        <td><input name="uploaded" type="file" id="word" /></td>
+    </tr>
+    <tr>
+    	<td><input type="submit" name="submit" value="Upload" /></td>
+        <td><input type="reset" /></td>
+    </tr>
+</table>
+</form>
+</div>
+</body>
+</html>
